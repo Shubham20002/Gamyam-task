@@ -1,6 +1,6 @@
 
 
-export default function ProductCardView({ products }) {
+export default function ProductCardView({ products,onEdit }) {
   return (
     <div style={{ marginTop: "20px" }}>
       <h2>Products (Card View)</h2>
@@ -49,6 +49,19 @@ export default function ProductCardView({ products }) {
             >
               {p.isActive ? "Active" : "Inactive"}
             </span>
+            <button
+              onClick={() => onEdit(p)}
+              style={{
+                marginTop: "10px",
+                padding: "6px 10px",
+                borderRadius: "6px",
+                border: "1px solid #aaa",
+                cursor: "pointer",
+                background: "#f5f5f5",
+              }}
+            >
+              Edit
+            </button>
           </div>
         ))}
       </div>

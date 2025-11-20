@@ -1,6 +1,6 @@
-// src/components/ProductTable.jsx
 
-export default function ProductTable({ products }) {
+
+export default function ProductTable({ products,onEdit }) {
   return (
     <div style={{ marginTop: "20px" }}>
       <h2>Products (List View)</h2>
@@ -18,6 +18,7 @@ export default function ProductTable({ products }) {
             <th style={thStyle}>Category</th>
             <th style={thStyle}>Stock</th>
             <th style={thStyle}>Status</th>
+            <th style={thStyle}>Actions</th>
           </tr>
         </thead>
 
@@ -40,6 +41,20 @@ export default function ProductTable({ products }) {
                 >
                   {p.isActive ? "Active" : "Inactive"}
                 </span>
+              </td>
+              <td style={tdStyle}>
+                <button
+                  onClick={() => onEdit(p)}
+                  style={{
+                    padding: "6px 10px",
+                    borderRadius: "6px",
+                    border: "1px solid #aaa",
+                    cursor: "pointer",
+                    background: "#f5f5f5",
+                  }}
+                >
+                  Edit
+                </button>
               </td>
             </tr>
           ))}
