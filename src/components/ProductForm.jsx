@@ -1,4 +1,3 @@
-// src/components/ProductForm.jsx
 
 import { useState, useEffect } from "react";
 
