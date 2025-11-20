@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { PRODUCT_LIST } from "./data/products";
+import ProductTable from "./components/ProductTable";
 
 export default function App() {
   const [products] = useState(PRODUCT_LIST);
@@ -12,6 +13,7 @@ export default function App() {
 
       <main>
         <p>Total Products Loaded: {products.length}</p>
+        <ProductTable products={products} />
       </main>
     </div>
   );
