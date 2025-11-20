@@ -1,4 +1,4 @@
-// src/components/ProductCardView.jsx
+
 
 export default function ProductCardView({ products }) {
   return (
