@@ -1,7 +1,9 @@
 
-import React from "react";
+import { useState } from "react";
+import { PRODUCT_LIST } from "./data/products";
 
 export default function App() {
+  const [products] = useState(PRODUCT_LIST);
   return (
     <div className="app">
       <header className="header">
@@ -9,7 +11,7 @@ export default function App() {
       </header>
 
       <main>
-        <p>Loading app...</p>
+        <p>Total Products Loaded: {products.length}</p>
       </main>
     </div>
   );
