@@ -1,4 +1,4 @@
-[
+export const PRODUCT_LIST=[
   {
     "id": 1,
     "name": "Wireless Mouse",
